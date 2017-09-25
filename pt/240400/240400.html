@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stackoverflow 240400</title>
+
+	<style type="text/css">
+		#image {
+			margin: 100px 100px;
+		}
+	</style>
+</head>
+<body>
+
+<img src="https://www.google.com/images/srpr/logo3w.png" id="image">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"></script>
+
+<script type="text/javascript">
+	var value = 0
+	$("#image").rotate({
+	  bind: {
+	    click: function() {
+	      console.log(value);
+	      value += 90;
+	      $(this).rotate({
+	        animateTo: value
+	      })
+	    }
+	  }
+	});
+</script>
+
+</body>
+</html>
